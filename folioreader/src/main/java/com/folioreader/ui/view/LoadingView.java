@@ -7,10 +7,8 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.webkit.JavascriptInterface;
 import android.widget.ProgressBar;
-
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
-
 import com.folioreader.Config;
 import com.folioreader.R;
 import com.folioreader.util.AppUtil;
@@ -77,7 +75,7 @@ public class LoadingView extends ConstraintLayout {
         Config config = AppUtil.getSavedConfig(getContext());
         if (config == null)
             config = new Config();
-        UiUtil.setColorIntToDrawable(config.getCurrentThemeColor(), progressBar.getIndeterminateDrawable());
+        UiUtil.setColorIntToDrawable(config.getThemeColor(), progressBar.getIndeterminateDrawable());
         if (config.isNightMode()) {
             setBackgroundColor(ContextCompat.getColor(getContext(), R.color.night_background_color));
         } else {
