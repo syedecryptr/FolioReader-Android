@@ -12,18 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-
+import android.widget.*;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.folioreader.Config;
 import com.folioreader.Constants;
 import com.folioreader.R;
@@ -146,7 +140,7 @@ public class DictionaryFragment extends DialogFragment
         Config config = AppUtil.getSavedConfig(getContext());
         assert config != null;
         assert getContext() != null;
-        final int themeColor = config.getCurrentThemeColor();
+        final int themeColor = config.getThemeColor();
 
         UiUtil.setColorIntToDrawable(themeColor, imageViewClose.getDrawable());
         LinearLayout layoutHeader = view.findViewById(R.id.layout_header);

@@ -7,9 +7,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.text.Layout;
 import android.util.AttributeSet;
-
 import androidx.appcompat.widget.AppCompatTextView;
-
 import com.folioreader.R;
 
 /**
